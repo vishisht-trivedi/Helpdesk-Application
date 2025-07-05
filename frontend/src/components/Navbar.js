@@ -36,13 +36,15 @@ const Navbar = () => {
   return (
     <BSNavbar bg={darkMode ? 'dark' : 'light'} variant={darkMode ? 'dark' : 'light'} expand="lg" className="mb-4 sticky-top shadow-sm" style={{ zIndex: 100 }}>
       <Container fluid>
-        <BSNavbar.Brand as={Link} to="/" className="d-flex align-items-center gap-2">
+        {/* Left: Logo and Helpdesk title */}
+        <BSNavbar.Brand as={Link} to="/" className="d-flex align-items-center gap-2 me-4">
           <img src="/acompworld-logo.png" alt="logo" width={32} height={32} style={{ borderRadius: 8 }} />
           <span style={{ fontWeight: 600, fontSize: 22 }}>Helpdesk</span>
         </BSNavbar.Brand>
         <BSNavbar.Toggle aria-controls="main-navbar-nav" />
         <BSNavbar.Collapse id="main-navbar-nav">
-          <Nav className="me-auto align-items-center gap-2">
+          {/* Center/Left: Navigation links */}
+          <Nav className="flex-row align-items-center gap-2 me-auto">
             {user && user.role === 'Admin' && (
               <>
                 <Nav.Link as={Link} to="/admin" active={location.pathname === '/admin'}>Dashboard</Nav.Link>
@@ -65,10 +67,8 @@ const Navbar = () => {
               </>
             )}
           </Nav>
-          <Nav className="ms-auto align-items-center gap-3">
-            {user && (
-              <span className="logged-in-badge ms-2">Logged in as <b>{user.name}</b></span>
-            )}
+          {/* Right: User info, dark mode, and dropdown */}
+          <div className="d-flex align-items-center gap-3 ms-auto flex-row">
             {/* Dark mode toggle */}
             <div className="dark-toggle" aria-label="Toggle dark mode">
               <input
@@ -84,6 +84,9 @@ const Navbar = () => {
                 </span>
               </label>
             </div>
+            {user && (
+              <span className="logged-in-badge ms-2">Logged in as <b>{user.name}</b></span>
+            )}
             {/* User avatar and dropdown */}
             {user && (
               <Dropdown align="end">
@@ -103,7 +106,7 @@ const Navbar = () => {
                 </Dropdown.Menu>
               </Dropdown>
             )}
-          </Nav>
+          </div>
         </BSNavbar.Collapse>
       </Container>
     </BSNavbar>
