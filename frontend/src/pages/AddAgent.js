@@ -32,7 +32,7 @@ const AddAgent = () => {
 
   return (
     <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '70vh' }}>
-      <Card className="shadow-lg p-4" style={{ minWidth: 400, background: '#fff', borderRadius: 16 }}>
+      <Card className="shadow-lg p-4 w-100" style={{ maxWidth: 400, background: '#fff', borderRadius: 16 }}>
         <Card.Title className="mb-3 text-center fw-bold" style={{ fontSize: '1.5rem', letterSpacing: 1 }}>Add Agent</Card.Title>
         {success && <Alert variant="success">{success}</Alert>}
         {error && <Alert variant="danger">{error}</Alert>}

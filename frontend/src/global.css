@@ -586,4 +586,80 @@ body.dark .agent-bubble {
 body.dark .user-bubble {
   background: #fff !important;
   color: #18181b !important;
+}
+
+/* --- Add/Update Responsive Styles for Mobile --- */
+@media (max-width: 768px) {
+  .navbar-pro, .navbar, .navbar .container-fluid {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 0.7rem 0.5rem !important;
+  }
+  .navbar-links, .navbar .nav {
+    flex-direction: column !important;
+    gap: 0.7rem !important;
+    align-items: flex-start !important;
+    width: 100%;
+  }
+  .navbar-links a, .navbar-links button, .nav-link, .dropdown-item {
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    padding: 0.7rem 1rem;
+  }
+  .logged-in-badge {
+    margin: 0.5em 0 0.5em 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1em;
+  }
+  .avatar-toggle {
+    margin-top: 0.5rem !important;
+  }
+  .card, .form-card, .stat-card, .dashboard-card {
+    padding: 1.1rem 0.5rem !important;
+    max-width: 99vw !important;
+    margin: 1.2rem auto !important;
+  }
+  .dashboard-title {
+    font-size: 1.4rem !important;
+    text-align: center;
+  }
+  .stat-card, .dashboard-card {
+    margin-bottom: 1.2rem !important;
+  }
+  .table th, .table td {
+    padding: 0.6rem 0.3rem !important;
+    font-size: 0.98rem !important;
+  }
+  .btn, button, .btn-primary, .btn-success, .btn-danger, .btn-warning, .btn-info {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1rem 0.5rem;
+    margin-bottom: 0.7rem;
+  }
+  .container, .container-fluid {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+}
+@media (max-width: 480px) {
+  .dashboard-title {
+    font-size: 1.1rem !important;
+  }
+  .card, .form-card, .stat-card, .dashboard-card {
+    padding: 0.7rem 0.2rem !important;
+    font-size: 0.98rem !important;
+  }
+  .navbar-logo img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  .navbar-logo span {
+    font-size: 1.1rem !important;
+  }
+  .btn, button {
+    font-size: 1rem !important;
+    padding: 0.8rem 0.3rem !important;
+  }
 } 
