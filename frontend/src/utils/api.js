@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: '', // No prefix, endpoints should include /api if needed
+  baseURL: process.env.REACT_APP_API_URL || '', // Use env variable for backend URL
 });
 
 // Attach token to every request if available
